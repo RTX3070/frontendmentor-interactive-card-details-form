@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Frontend Mentor | Interactive card details form</title>
+    </head>
+    <body>
+        <main class="container">
+            <div class="left-col">
+                <picture class="left-col__bg">
+                    <source media="(max-width: 1439px)" srcset="images/bg-main-mobile.png">
+                    <img src="images/bg-main-desktop.png" alt="">
+                </picture>
+                    
+                <div class="card__front">
+                    <img src="images/card-logo.svg" alt="" class="card__front__logo">
+
+                    <img class="card__front__img" src="images/bg-card-front.png" alt="">
+
+                    <div class="card__front__data">
+                        <p class="number">0000 0000 0000 0000</p>
+
+                        <p class="owner">Jane Appleseed</p>
+
+                        <p class="date"><span class="date-month">00</span>/<span class="date-year">00</span></p>
+                    </div>
+                </div>
+
+                <div class="card__back">
+                    <img class="card__back__img" src="images/bg-card-back.png" alt="">
+    
+                    <p class="card__back__cvc">000</p>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <form class="module" novalidate>
+                    <div class="module__form-group">
+                        <label for="carholder">Cardholder Name</label>
+                        <input class="nameField" type="text" name="carholder" id="carholder" maxlength="50" placeholder="e.g. Jane Appleseed">
+                    </div>
+
+                    <div class="module__form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input class="numberField" type="number" name="cardNumber" id="cardNumber" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+                    </div>
+
+                    <div class="module__form-group">
+                        <div class="module__form-group__date">
+                            <label for="expDate">Exp. Date (MM/YY)</label>
+                            <input class="date expMonth" type="number" name="expMonth" id="expDate" maxlength="2" placeholder="MM">
+                            <input class="date expYear" type="number" name="expYear" id="expDate" maxlength="2" placeholder="YY">
+                        </div>
+
+                        <div class="module__form-group__cvc">
+                          <label for="cvc">CVC</label>
+                          <input class="cvc" type="number" name="cvc" id="cvc" maxlength="3" placeholder="e.g. 123">
+                        </div>
+                    </div>
+
+                    <button class="module__submit">Confirm</button>
+
+                    <div is="pop-up" data-open="false"></div>
+                </form>
+            </div>
+        </main>
+      
+        <footer>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://www.frontendmentor.io/profile/RTX3070">RTX3070</a>.
+        </footer>
+    </body>
+
+    <script src="js/controller.js" type="module"></script>
+    <script src="js/components/popUp.js"></script>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "interactive-card-details-form-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive card details form coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass:compile": "sass --watch --style compressed scss/main.scss:css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.4"
+  }
+}
